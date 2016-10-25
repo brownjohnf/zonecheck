@@ -1,0 +1,27 @@
+---
+# Uour root domain
+domain: example.com
+
+# There must be EXACTLY 2 nameservers to compare
+nameservers:
+  - NS1
+  - NS2
+
+records:
+  # any valid record type is valid
+  a:
+    # leave blank for an apex record
+    -
+    # wildcards are supported, but must be quoted
+    - "*.subdomain"
+    - admin
+  cname:
+    - alpha
+  mx:
+    -
+    - mail
+  txt:
+    -
+    - _dmarc
+    - mail
+
